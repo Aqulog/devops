@@ -19,6 +19,6 @@ jobs:
         port: ${{ secrets.REMOTE_PORT }}
         script: |
           rm -rf ./devops
-          git clone https://github.com/Aqulog/devpos.git
+          git clone https://github.com/Aqulog/devops.git
           ./devops/gradle build
           
