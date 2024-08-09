@@ -18,4 +18,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.REMOTE_PORT }}
         script: |
-          echo test > /tmp/abcd
+          rm -rf ./devops
+          git clone https://github.com/Aqulog/devpos.git
+          ./devops/gradle build
+          
