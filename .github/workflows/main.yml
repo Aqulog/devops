@@ -18,14 +18,3 @@ jobs:
         run: |
           chmod +x ./gradlew
           ./gradlew build
-
-      - name: get code from github
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.REMOTE_PORT }}
-          script: |
-            rm -rf ./devops
-            git clone https://github.com/Aqulog/devops.git
